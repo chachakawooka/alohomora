@@ -1,0 +1,6 @@
+{
+  "apiEndpoint": "https://alohomora.cdn.prismic.io/api/v2",
+  "libraries": ["@/slices"],
+  "_latest": "0.3.0",
+  "localTypesPath": "./types"
+}

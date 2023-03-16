@@ -1,0 +1,70 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "teeth"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": []
+  },
+  "meta_title": {
+    "__TYPE__": "FieldContent",
+    "value": "basket",
+    "type": "Text"
+  },
+  "meta_description": {
+    "__TYPE__": "FieldContent",
+    "value": "knew",
+    "type": "Text"
+  },
+  "social_cards": {
+    "__TYPE__": "GroupContentType",
+    "value": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "social_card_image",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+                "width": 4752,
+                "height": 3168
+              },
+              "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+              "width": 4752,
+              "height": 3168,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ],
+          [
+            "social_card_title",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "step",
+              "type": "Text"
+            }
+          ],
+          [
+            "social_card_description",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "eight",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

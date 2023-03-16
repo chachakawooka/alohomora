@@ -1,0 +1,88 @@
+{
+  "title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Ad adipisicing et et irure in laboris qui do laborum do irure do. Eu ea irure magna eiusmod do quis cillum enim aliqua ut. Nisi reprehenderit occaecat in do do adipisicing cupidatat aliquip."
+        }
+      }
+    ]
+  },
+  "description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "In exercitation esse esse quis cupidatat esse ad minim commodo voluptate tempor quis nostrud nostrud. Ad sit et incididunt in exercitation."
+        }
+      }
+    ]
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+      "width": 4000,
+      "height": 4000
+    },
+    "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+    "width": 4000,
+    "height": 4000,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "text_block$35faf981-1d13-44eb-9e07-c7043628c262",
+        "name": "text_block",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading1",
+                  "content": {
+                    "text": "Already"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Deserunt eu aliquip quis officia pariatur. Sunt irure officia est sint culpa do aliqua proident dolore ex tempor."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
