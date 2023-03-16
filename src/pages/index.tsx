@@ -61,6 +61,7 @@ const Home: React.FC<HomeProps> = ({ services }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const servicesResponse = await client.query('[at(document.type, "service")]');
+  console.log(JSON.stringify(servicesResponse.results, null, 2));
   const services = servicesResponse.results.map((service) => ({
     id: service.id,
     data: {

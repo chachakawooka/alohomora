@@ -3,24 +3,13 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
-      "title": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading1",
-            "content": {
-              "text": "Ancient"
-            }
-          }
-        ]
-      },
-      "description": {
+      "content": {
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
             "type": "paragraph",
             "content": {
-              "text": "Deserunt nostrud aute reprehenderit. Quis veniam veniam sit id ut elit eu aliqua. Ea do veniam deserunt dolor excepteur non ea ea non cupidatat."
+              "text": "Excepteur deserunt aliquip nostrud consequat ea esse anim laboris enim elit quis excepteur. Amet incididunt aliquip cillum commodo adipisicing nulla proident ea deserunt non ullamco magna eiusmod culpa fugiat. Culpa pariatur sunt excepteur."
             }
           }
         ]

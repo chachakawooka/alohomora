@@ -935,6 +935,17 @@ interface ServiceDocumentData {
      */
     image: prismicT.ImageField<never>;
     /**
+     * hero_image field in *Service*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: service.hero_image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    hero_image: prismicT.ImageField<never>;
+    /**
      * Slice Zone field in *Service*
      *
      * - **Field Type**: Slice Zone
@@ -960,7 +971,7 @@ type ServiceDocumentDataSlicesSlice = TextBlockSlice;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type ServiceDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<ServiceDocumentData>, "service", Lang>;
+export type ServiceDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ServiceDocumentData>, "service", Lang>;
 export type AllDocumentTypes = PageDocument | ServiceDocument;
 /**
  * Primary content in TextBlock → Primary
@@ -968,25 +979,15 @@ export type AllDocumentTypes = PageDocument | ServiceDocument;
  */
 interface TextBlockSliceDefaultPrimary {
     /**
-     * Title field in *TextBlock → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: text_block.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *TextBlock → Primary*
+     * content field in *TextBlock → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: text_block.primary.description
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text_block.primary.content
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    description: prismicT.RichTextField;
+    content: prismicT.RichTextField;
 }
 /**
  * Default variation for TextBlock Slice

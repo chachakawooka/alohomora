@@ -5,6 +5,13 @@
   "status": true,
   "json": {
     "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
       "title": {
         "type": "StructuredText",
         "config": {
@@ -27,6 +34,14 @@
         "type": "Image",
         "config": {
           "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "hero_image": {
+        "type": "Image",
+        "config": {
+          "label": "hero_image",
           "constraint": {},
           "thumbnails": []
         }

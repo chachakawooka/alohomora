@@ -3,7 +3,10 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { Client } from "../../../prismic";
 import { RichText } from "prismic-reactjs";
+import HeroBanner from "../../components/HeroBanner";
 import { ServiceDocument } from "../../../types";
+import { SliceZone } from "@prismicio/react";
+import { components } from "../../../slices";
 
 interface ServicePageProps {
   service: ServiceDocument;
@@ -18,8 +21,15 @@ const ServicePage = ({ service }: ServicePageProps) => {
 
   return (
     <div>
-      <h1>{service.data.title}</h1>
-      <div>{service.data.description}</div>
+      {service.data.hero_image.url && (
+        <HeroBanner
+          title={RichText.asText(service.data.title)}
+          imageUrl={service.data.hero_image.url}
+          imageAlt={service.data.hero_image.alt || ""}
+          description={RichText.asText(service.data.description)}
+        />
+      )}
+      <SliceZone slices={service.data.slices} components={components} />
     </div>
   );
 };

@@ -3,6 +3,10 @@
     "service": {}
   },
   "slices": {
-    "TextBlock": {}
+    "TextBlock": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

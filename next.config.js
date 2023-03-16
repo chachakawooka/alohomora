@@ -6,4 +6,7 @@ module.exports = withTM({
   env: {
     PRISMIC_API_ENDPOINT: process.env.PRISMIC_API_ENDPOINT,
   },
+  images: {
+    domains: ["images.prismic.io"],
+  },
 });
