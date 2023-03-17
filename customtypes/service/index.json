@@ -56,6 +56,9 @@
             },
             "drink_driving_calculator": {
               "type": "SharedSlice"
+            },
+            "conveyancing_calculator": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -12,6 +12,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "ConveyancingCalculator": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

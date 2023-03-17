@@ -7,39 +7,47 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: $white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     overflow: hidden;
     margin: 1rem;
-    max-width: 400px;
-    transition: all 0.3s ease; // Add a transition effect
+    max-width: 320px;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-0.5rem); // Add a hover effect
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.5rem);
 }
 
 .cardContent {
     flex: 1;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: $ravenclaw-blue;
     color: $white;
 }
 
 .cardDescription {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 // Add a new style for the title in the card
 .cardTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
     color: $gryffindor-gold;
-    margin-bottom: 0.5rem; // Add some space below the title
-}
+    margin-bottom: 0.5rem;
 
-.card-image {
+    &:hover {
+        font-size: 1.3rem;
+    }
+}
+.cardImage {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    padding: 0.5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 2px solid $slytherin-green;
 }

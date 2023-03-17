@@ -1,8 +1,31 @@
+@import "../../src/styles/colors";
+
 .textBlock {
     padding: 1rem;
-}
-
-.content {
-    font-size: 1rem;
+    background-color: $ravenclaw-blue;
+    color: $white;
+    margin-bottom: 2rem;
+    text-align: justify;
     line-height: 1.5;
+
+    h2 {
+        font-size: 2rem;
+        color: $white;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: $gryffindor-red;
+        text-decoration: underline;
+        transition: color 0.3s;
+
+        &:hover {
+            color: lighten($gryffindor-red, 10%);
+        }
+    }
 }
