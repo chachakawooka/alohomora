@@ -961,7 +961,7 @@ interface ServiceDocumentData {
  * Slice for *Service → Slice Zone*
  *
  */
-type ServiceDocumentDataSlicesSlice = TextBlockSlice;
+type ServiceDocumentDataSlicesSlice = TextBlockSlice | DrinkDrivingCalculatorSlice;
 /**
  * Service document from Prismic
  *
@@ -973,6 +973,29 @@ type ServiceDocumentDataSlicesSlice = TextBlockSlice;
  */
 export type ServiceDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ServiceDocumentData>, "service", Lang>;
 export type AllDocumentTypes = PageDocument | ServiceDocument;
+/**
+ * Default variation for DrinkDrivingCalculator Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `DrinkDrivingCalculator`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type DrinkDrivingCalculatorSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, never>;
+/**
+ * Slice variation for *DrinkDrivingCalculator*
+ *
+ */
+type DrinkDrivingCalculatorSliceVariation = DrinkDrivingCalculatorSliceDefault;
+/**
+ * DrinkDrivingCalculator Shared Slice
+ *
+ * - **API ID**: `drink_driving_calculator`
+ * - **Description**: `DrinkDrivingCalculator`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type DrinkDrivingCalculatorSlice = prismicT.SharedSlice<"drink_driving_calculator", DrinkDrivingCalculatorSliceVariation>;
 /**
  * Primary content in TextBlock → Primary
  *
@@ -1017,6 +1040,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { PageDocumentData, PageDocumentDataSlicesAlternateGridSlicePrimary, PageDocumentDataSlicesAlternateGridSliceItem, PageDocumentDataSlicesAlternateGridSlice, PageDocumentDataSlicesCallToActionSlicePrimary, PageDocumentDataSlicesCallToActionSlice, PageDocumentDataSlicesCardsCarouselSlicePrimary, PageDocumentDataSlicesCardsCarouselSliceItem, PageDocumentDataSlicesCardsCarouselSlice, PageDocumentDataSlicesCustomerLogosSlicePrimary, PageDocumentDataSlicesCustomerLogosSliceItem, PageDocumentDataSlicesCustomerLogosSlice, PageDocumentDataSlicesFaqSectionSlicePrimary, PageDocumentDataSlicesFaqSectionSliceItem, PageDocumentDataSlicesFaqSectionSlice, PageDocumentDataSlicesFeatureTestimonialsSlicePrimary, PageDocumentDataSlicesFeatureTestimonialsSliceItem, PageDocumentDataSlicesFeatureTestimonialsSlice, PageDocumentDataSlicesImagesSliderSlicePrimary, PageDocumentDataSlicesImagesSliderSliceItem, PageDocumentDataSlicesImagesSliderSlice, PageDocumentDataSlicesPricingTableSlicePrimary, PageDocumentDataSlicesPricingTableSliceItem, PageDocumentDataSlicesPricingTableSlice, PageDocumentDataSlicesTestimonialsSliderSlicePrimary, PageDocumentDataSlicesTestimonialsSliderSliceItem, PageDocumentDataSlicesTestimonialsSliderSlice, PageDocumentDataSlicesVideoHighlightsSlicePrimary, PageDocumentDataSlicesVideoHighlightsSliceItem, PageDocumentDataSlicesVideoHighlightsSlice, PageDocumentDataSlicesSlice, PageDocumentDataSocialCardsItem, PageDocument, ServiceDocumentData, ServiceDocumentDataSlicesSlice, ServiceDocument, AllDocumentTypes, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { PageDocumentData, PageDocumentDataSlicesAlternateGridSlicePrimary, PageDocumentDataSlicesAlternateGridSliceItem, PageDocumentDataSlicesAlternateGridSlice, PageDocumentDataSlicesCallToActionSlicePrimary, PageDocumentDataSlicesCallToActionSlice, PageDocumentDataSlicesCardsCarouselSlicePrimary, PageDocumentDataSlicesCardsCarouselSliceItem, PageDocumentDataSlicesCardsCarouselSlice, PageDocumentDataSlicesCustomerLogosSlicePrimary, PageDocumentDataSlicesCustomerLogosSliceItem, PageDocumentDataSlicesCustomerLogosSlice, PageDocumentDataSlicesFaqSectionSlicePrimary, PageDocumentDataSlicesFaqSectionSliceItem, PageDocumentDataSlicesFaqSectionSlice, PageDocumentDataSlicesFeatureTestimonialsSlicePrimary, PageDocumentDataSlicesFeatureTestimonialsSliceItem, PageDocumentDataSlicesFeatureTestimonialsSlice, PageDocumentDataSlicesImagesSliderSlicePrimary, PageDocumentDataSlicesImagesSliderSliceItem, PageDocumentDataSlicesImagesSliderSlice, PageDocumentDataSlicesPricingTableSlicePrimary, PageDocumentDataSlicesPricingTableSliceItem, PageDocumentDataSlicesPricingTableSlice, PageDocumentDataSlicesTestimonialsSliderSlicePrimary, PageDocumentDataSlicesTestimonialsSliderSliceItem, PageDocumentDataSlicesTestimonialsSliderSlice, PageDocumentDataSlicesVideoHighlightsSlicePrimary, PageDocumentDataSlicesVideoHighlightsSliceItem, PageDocumentDataSlicesVideoHighlightsSlice, PageDocumentDataSlicesSlice, PageDocumentDataSocialCardsItem, PageDocument, ServiceDocumentData, ServiceDocumentDataSlicesSlice, ServiceDocument, AllDocumentTypes, DrinkDrivingCalculatorSliceDefault, DrinkDrivingCalculatorSliceVariation, DrinkDrivingCalculatorSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

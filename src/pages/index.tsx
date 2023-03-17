@@ -42,6 +42,15 @@ const Home: React.FC<HomeProps> = ({ services }) => {
       </div>
 
       <div className={homePageStyles.servicesContainer}>
+        <h2>Our Wizarding Legal Services</h2>
+        <p>
+          At Alohomora & Associates, we specialize in a wide range of legal
+          services for the magical community. Whether you're dealing with a case
+          of magical malpractice or need assistance with a magical contract, our
+          experienced lawyers have the knowledge and expertise to help you
+          navigate the complex world of wizarding law. Browse our services below
+          to learn more about how we can assist you.
+        </p>
         {services.map((service) => (
           <Card
             key={service.id}

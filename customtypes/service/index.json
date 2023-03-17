@@ -53,6 +53,9 @@
           "choices": {
             "text_block": {
               "type": "SharedSlice"
+            },
+            "drink_driving_calculator": {
+              "type": "SharedSlice"
             }
           }
         }

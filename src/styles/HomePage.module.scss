@@ -1,22 +1,9 @@
 @import "./colors.scss";
 
-// src/styles/HomePage.module.scss
-.servicesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-// src/styles/HomePage.module.scss
 .introduction {
-    margin: 2rem 0;
     text-align: center;
     max-width: 900px;
-    padding: 0 1rem;
-    line-height: 1.5;
-    margin: 0 auto;
+    margin: 2rem auto;
 
     h1 {
         font-size: 2rem;
@@ -28,11 +15,13 @@
         font-size: 1.1rem;
         color: $black;
         text-align: justify;
+        line-height: 1.5;
     }
+}
 
-    h2 {
-        font-size: 1.5rem;
-        color: $slytherin-green;
-        margin: 1rem 0;
-    }
+.servicesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }

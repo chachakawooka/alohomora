@@ -21,14 +21,13 @@ const ServicePage = ({ service }: ServicePageProps) => {
 
   return (
     <div>
-      {service.data.hero_image.url && (
-        <HeroBanner
-          title={RichText.asText(service.data.title)}
-          imageUrl={service.data.hero_image.url}
-          imageAlt={service.data.hero_image.alt || ""}
-          description={RichText.asText(service.data.description)}
-        />
-      )}
+      <HeroBanner
+        title={RichText.asText(service.data.title)}
+        imageUrl={service.data.hero_image.url || service.data.image.url || ""}
+        imageAlt={service.data.hero_image.alt || service.data.image.alt || ""}
+        description={RichText.asText(service.data.description)}
+      />
+
       <SliceZone slices={service.data.slices} components={components} />
     </div>
   );

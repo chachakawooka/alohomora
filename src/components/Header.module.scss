@@ -1,0 +1,85 @@
+@import "../styles/colors";
+
+.header {
+    background-color: $hufflepuff-yellow;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.companyName {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navItem {
+    margin: 0 1.5rem;
+    a {
+        text-decoration: none;
+    }
+}
+.navLink {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $black;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, transform 0.3s, border-color 0.3s;
+
+    &:hover {
+        color: $gryffindor-red;
+        transform: translateY(-2px);
+        border-color: $gryffindor-red;
+    }
+}
+
+.active {
+    color: $gryffindor-red;
+    border-bottom: 2px solid $gryffindor-red;
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .companyName {
+        font-size: 1.4rem;
+    }
+
+    .nav {
+        display: none;
+    }
+}
