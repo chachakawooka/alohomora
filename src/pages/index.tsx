@@ -52,7 +52,7 @@ const Home: React.FC<HomeProps> = ({ services, homepage }) => {
 
       <SliceZone slices={sliceZone} components={components} />
 
-      <div className={homePageStyles.servicesContainer}>
+      <div className={homePageStyles.servicesContainer} id="services">
         <h2>Our Wizarding Legal Services</h2>
         <p>
           At Alohomora & Associates, we specialize in a wide range of legal

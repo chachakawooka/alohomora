@@ -1,29 +1,93 @@
+/* ./TextBlock.module.scss */
+
 @import "../../src/styles/colors";
 
 .textBlock {
+    position: relative;
     padding: 1rem;
-    background-color: $ravenclaw-blue;
-    color: $white;
+    color: $ravenclaw-blue;
     line-height: 1.5;
+    max-width: 800px;
+    overflow: visible;
 
     h2 {
         font-size: 2rem;
-        color: $white;
         margin-bottom: 1rem;
     }
 
     p {
         font-size: 1.2rem;
         margin-bottom: 1rem;
+        color: $black;
+        text-align: justify;
     }
 
     a {
         color: $gryffindor-red;
-        text-decoration: underline;
+        text-decoration: none;
         transition: color 0.3s;
 
         &:hover {
-            color: lighten($gryffindor-red, 10%);
+            color: $gryffindor-gold;
         }
+    }
+
+    /* Adds margin to center the text block horizontally */
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+}
+
+.background {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.pentagon-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.pentagon-wrapper {
+    aspect-ratio: 1/1;
+    height: 46%;
+    position: absolute;
+    top: calc(random() * 50%);
+    left: calc(random() * 50%);
+    transform: translate(-50%, -50%) rotate(calc(random() * 360deg));
+
+    &:nth-child(2) {
+        top: calc(random() * 100%);
+        left: calc(random() * 100%);
+        transform: translate(-50%, -50%) rotate(calc(random() * 360deg));
+    }
+}
+.shape {
+    fill: transparent;
+    stroke: lighten($ravenclaw-bronze, 50%);
+    stroke-width: 1px;
+    transform-origin: center center;
+    display: inline-block;
+}
+
+@function random() {
+    @return random(100) / 100;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 2rem;
     }
 }

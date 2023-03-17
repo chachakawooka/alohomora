@@ -28,7 +28,7 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link href="/services" passHref>
+              <Link href="/#services" passHref>
                 <span
                   className={`${styles.navLink} ${
                     router.pathname === "/services" ? styles.active : ""
