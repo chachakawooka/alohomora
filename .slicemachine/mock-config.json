@@ -1,6 +1,7 @@
 {
   "_cts": {
-    "service": {}
+    "service": {},
+    "page": {}
   },
   "slices": {
     "TextBlock": {

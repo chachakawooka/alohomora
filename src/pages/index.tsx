@@ -6,6 +6,8 @@ import Card from "../components/Card";
 import homePageStyles from "../styles/HomePage.module.scss";
 import { linkResolver } from "../../prismic";
 import { ServiceDocument } from "../../types";
+import { SliceZone } from "@prismicio/react";
+import { components } from "../../slices";
 
 // Replace this with your Prismic API endpoint
 const apiEndpoint = process.env.PRISMIC_API_ENDPOINT || "";
@@ -24,9 +26,16 @@ interface Service {
 
 interface HomeProps {
   services: ServiceDocument[];
+  homepage: {
+    data: {
+      slices: any[];
+    };
+  };
 }
 
-const Home: React.FC<HomeProps> = ({ services }) => {
+const Home: React.FC<HomeProps> = ({ services, homepage }) => {
+  const sliceZone = homepage?.data?.slices;
+
   return (
     <div>
       <div className={homePageStyles.introduction}>
@@ -40,6 +49,8 @@ const Home: React.FC<HomeProps> = ({ services }) => {
           with the utmost care and expertise.
         </p>
       </div>
+
+      <SliceZone slices={sliceZone} components={components} />
 
       <div className={homePageStyles.servicesContainer}>
         <h2>Our Wizarding Legal Services</h2>
@@ -69,8 +80,10 @@ const Home: React.FC<HomeProps> = ({ services }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  const homepageResponse = await client.getByUID("page", "home");
+  const homepage = homepageResponse || null;
+
   const servicesResponse = await client.query('[at(document.type, "service")]');
-  console.log(JSON.stringify(servicesResponse.results, null, 2));
   const services = servicesResponse.results.map((service) => ({
     id: service.id,
     data: {
@@ -88,6 +101,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       services,
+      homepage,
     },
   };
 };
