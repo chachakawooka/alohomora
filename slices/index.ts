@@ -2,16 +2,19 @@
 
 import ConveyancingCalculator from './ConveyancingCalculator';
 import DrinkDrivingCalculator from './DrinkDrivingCalculator';
+import Testimonials from './Testimonials';
 import TextBlock from './TextBlock';
 
 export {
 	ConveyancingCalculator,
 	DrinkDrivingCalculator,
+	Testimonials,
 	TextBlock,
 };
 
 export const components = {
 	conveyancing_calculator: ConveyancingCalculator,
 	drink_driving_calculator: DrinkDrivingCalculator,
+	testimonials: Testimonials,
 	text_block: TextBlock,
 };

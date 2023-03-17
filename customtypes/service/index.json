@@ -59,6 +59,9 @@
             },
             "conveyancing_calculator": {
               "type": "SharedSlice"
+            },
+            "testimonials": {
+              "type": "SharedSlice"
             }
           }
         }

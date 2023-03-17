@@ -961,7 +961,7 @@ interface ServiceDocumentData {
  * Slice for *Service → Slice Zone*
  *
  */
-type ServiceDocumentDataSlicesSlice = TextBlockSlice | DrinkDrivingCalculatorSlice | ConveyancingCalculatorSlice;
+type ServiceDocumentDataSlicesSlice = TextBlockSlice | DrinkDrivingCalculatorSlice | ConveyancingCalculatorSlice | TestimonialsSlice;
 /**
  * Service document from Prismic
  *
@@ -1020,6 +1020,91 @@ type DrinkDrivingCalculatorSliceVariation = DrinkDrivingCalculatorSliceDefault;
  */
 export type DrinkDrivingCalculatorSlice = prismicT.SharedSlice<"drink_driving_calculator", DrinkDrivingCalculatorSliceVariation>;
 /**
+ * Primary content in Testimonials → Primary
+ *
+ */
+interface TestimonialsSliceDefaultPrimary {
+    /**
+     * Title field in *Testimonials → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: testimonials.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+}
+/**
+ * Item in Testimonials → Items
+ *
+ */
+export interface TestimonialsSliceDefaultItem {
+    /**
+     * quote field in *Testimonials → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.items[].quote
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    quote: prismicT.RichTextField;
+    /**
+     * name field in *Testimonials → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.items[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * position field in *Testimonials → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.items[].position
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    position: prismicT.KeyTextField;
+    /**
+     * rating field in *Testimonials → Items*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.items[].rating
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    rating: prismicT.NumberField;
+}
+/**
+ * Default variation for Testimonials Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Testimonials`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TestimonialsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TestimonialsSliceDefaultPrimary>, Simplify<TestimonialsSliceDefaultItem>>;
+/**
+ * Slice variation for *Testimonials*
+ *
+ */
+type TestimonialsSliceVariation = TestimonialsSliceDefault;
+/**
+ * Testimonials Shared Slice
+ *
+ * - **API ID**: `testimonials`
+ * - **Description**: `Testimonials`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TestimonialsSlice = prismicT.SharedSlice<"testimonials", TestimonialsSliceVariation>;
+/**
  * Primary content in TextBlock → Primary
  *
  */
@@ -1063,6 +1148,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { PageDocumentData, PageDocumentDataSlicesAlternateGridSlicePrimary, PageDocumentDataSlicesAlternateGridSliceItem, PageDocumentDataSlicesAlternateGridSlice, PageDocumentDataSlicesCallToActionSlicePrimary, PageDocumentDataSlicesCallToActionSlice, PageDocumentDataSlicesCardsCarouselSlicePrimary, PageDocumentDataSlicesCardsCarouselSliceItem, PageDocumentDataSlicesCardsCarouselSlice, PageDocumentDataSlicesCustomerLogosSlicePrimary, PageDocumentDataSlicesCustomerLogosSliceItem, PageDocumentDataSlicesCustomerLogosSlice, PageDocumentDataSlicesFaqSectionSlicePrimary, PageDocumentDataSlicesFaqSectionSliceItem, PageDocumentDataSlicesFaqSectionSlice, PageDocumentDataSlicesFeatureTestimonialsSlicePrimary, PageDocumentDataSlicesFeatureTestimonialsSliceItem, PageDocumentDataSlicesFeatureTestimonialsSlice, PageDocumentDataSlicesImagesSliderSlicePrimary, PageDocumentDataSlicesImagesSliderSliceItem, PageDocumentDataSlicesImagesSliderSlice, PageDocumentDataSlicesPricingTableSlicePrimary, PageDocumentDataSlicesPricingTableSliceItem, PageDocumentDataSlicesPricingTableSlice, PageDocumentDataSlicesTestimonialsSliderSlicePrimary, PageDocumentDataSlicesTestimonialsSliderSliceItem, PageDocumentDataSlicesTestimonialsSliderSlice, PageDocumentDataSlicesVideoHighlightsSlicePrimary, PageDocumentDataSlicesVideoHighlightsSliceItem, PageDocumentDataSlicesVideoHighlightsSlice, PageDocumentDataSlicesSlice, PageDocumentDataSocialCardsItem, PageDocument, ServiceDocumentData, ServiceDocumentDataSlicesSlice, ServiceDocument, AllDocumentTypes, ConveyancingCalculatorSliceDefault, ConveyancingCalculatorSliceVariation, ConveyancingCalculatorSlice, DrinkDrivingCalculatorSliceDefault, DrinkDrivingCalculatorSliceVariation, DrinkDrivingCalculatorSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
+        export type { PageDocumentData, PageDocumentDataSlicesAlternateGridSlicePrimary, PageDocumentDataSlicesAlternateGridSliceItem, PageDocumentDataSlicesAlternateGridSlice, PageDocumentDataSlicesCallToActionSlicePrimary, PageDocumentDataSlicesCallToActionSlice, PageDocumentDataSlicesCardsCarouselSlicePrimary, PageDocumentDataSlicesCardsCarouselSliceItem, PageDocumentDataSlicesCardsCarouselSlice, PageDocumentDataSlicesCustomerLogosSlicePrimary, PageDocumentDataSlicesCustomerLogosSliceItem, PageDocumentDataSlicesCustomerLogosSlice, PageDocumentDataSlicesFaqSectionSlicePrimary, PageDocumentDataSlicesFaqSectionSliceItem, PageDocumentDataSlicesFaqSectionSlice, PageDocumentDataSlicesFeatureTestimonialsSlicePrimary, PageDocumentDataSlicesFeatureTestimonialsSliceItem, PageDocumentDataSlicesFeatureTestimonialsSlice, PageDocumentDataSlicesImagesSliderSlicePrimary, PageDocumentDataSlicesImagesSliderSliceItem, PageDocumentDataSlicesImagesSliderSlice, PageDocumentDataSlicesPricingTableSlicePrimary, PageDocumentDataSlicesPricingTableSliceItem, PageDocumentDataSlicesPricingTableSlice, PageDocumentDataSlicesTestimonialsSliderSlicePrimary, PageDocumentDataSlicesTestimonialsSliderSliceItem, PageDocumentDataSlicesTestimonialsSliderSlice, PageDocumentDataSlicesVideoHighlightsSlicePrimary, PageDocumentDataSlicesVideoHighlightsSliceItem, PageDocumentDataSlicesVideoHighlightsSlice, PageDocumentDataSlicesSlice, PageDocumentDataSocialCardsItem, PageDocument, ServiceDocumentData, ServiceDocumentDataSlicesSlice, ServiceDocument, AllDocumentTypes, ConveyancingCalculatorSliceDefault, ConveyancingCalculatorSliceVariation, ConveyancingCalculatorSlice, DrinkDrivingCalculatorSliceDefault, DrinkDrivingCalculatorSliceVariation, DrinkDrivingCalculatorSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice, TextBlockSliceDefaultPrimary, TextBlockSliceDefault, TextBlockSliceVariation, TextBlockSlice };
     }
 }

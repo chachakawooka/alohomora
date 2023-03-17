@@ -1,0 +1,80 @@
+@import "../../src/styles/colors.scss";
+
+.testimonials {
+    background-color: $gryffindor-gold;
+    padding: 50px 0;
+
+    h2 {
+        color: $gryffindor-red;
+        font-size: 36px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .testimonials-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .testimonial {
+        background-color: $white;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        padding: 20px;
+        width: calc(100% / 3 - 30px);
+
+        blockquote {
+            color: $gryffindor-red;
+            font-size: 24px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            margin-top: 10px;
+
+            svg {
+                fill: $slytherin-green;
+                height: 24px;
+                margin-right: 5px;
+                width: 24px;
+            }
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+
+            .name {
+                color: $ravenclaw-bronze;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .position {
+                color: $slytherin-green;
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 480px) {
+                .name {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    text-align: center;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            width: calc(100% / 2 - 30px);
+        }
+
+        @media (max-width: 480px) {
+            width: calc(100% - 30px);
+        }
+    }
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Cloud"
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "quote",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Officia dolor ad labore duis in consequat aute proident veniam est. Qui amet mollit do laboris sint in nostrud do proident elit."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "name",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "party",
+              "type": "Text"
+            }
+          ],
+          [
+            "position",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "shelter",
+              "type": "Text"
+            }
+          ],
+          [
+            "rating",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "22",
+              "type": "Number"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]
