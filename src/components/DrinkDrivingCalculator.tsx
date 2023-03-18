@@ -57,7 +57,9 @@ const DrinkDrivingCalculator: React.FC = () => {
   };
 
   const getOffenceDescription = (bloodAlcoholLevel: number) => {
-    if (bloodAlcoholLevel >= 0.08) {
+    if (bloodAlcoholLevel >= 0.2) {
+      return "You are over the legal limit and could face up to 12 months in Azkaban, a 1000 Galleon fine, and a 24-month suspension of your broomstick license.";
+    } else if (bloodAlcoholLevel >= 0.08) {
       return "You are over the legal limit and could face up to 6 months in Azkaban, a 500 Galleon fine, and a 12-month suspension of your broomstick license.";
     } else if (bloodAlcoholLevel >= 0.05) {
       return "You are over the legal limit and could face up to 3 months in Azkaban, a 250 Galleon fine, and a 6-month suspension of your broomstick license.";
