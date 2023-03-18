@@ -6,6 +6,15 @@
     justify-content: center;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.tsparticles canvas {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .headerContainer {
