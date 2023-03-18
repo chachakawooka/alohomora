@@ -36,7 +36,7 @@ const TextBlock: React.FC<TextBlockProps> = ({ slice }) => {
           className={styles["pentagon-wrapper"]}
           style={{
             transform: `translate(-50%, -50%) rotate(${
-              (scrollPos / 10) % 360
+              (scrollPos / 20) % 360
             }deg)`,
           }}
         >
@@ -48,7 +48,7 @@ const TextBlock: React.FC<TextBlockProps> = ({ slice }) => {
           className={styles["pentagon-wrapper"]}
           style={{
             transform: `translate(-50%, -50%) rotate(${
-              (scrollPos / 10 + 180) % 360
+              ((scrollPos / 20 + 80) * -1) % 360
             }deg)`,
           }}
         >
